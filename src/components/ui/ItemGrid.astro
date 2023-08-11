@@ -3,7 +3,7 @@ import { twMerge } from 'tailwind-merge';
 import type { ItemGrid } from '~/types';
 import CTA from './CTA.astro';
 
-const { items = [], columns, defaultIcon = '', classes = {} } = Astro.props as ItemGrid;
+const { items = [], defaultIcon = '', classes = {} } = Astro.props as ItemGrid;
 
 const {
   container: containerClass = '',
@@ -17,7 +17,7 @@ const {
 
 {
   items && (
-    <div class={twMerge(`grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 mx-auto md:gap-6 gap-y-8 `, containerClass)}>
+    <div class={twMerge(`grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 mx-auto md:gap-6 gap-y-8 `, containerClass)}>
       {items.map(({ title, description, icon, callToAction, classes: itemClasses = {} }) => (
         <div>
           <div class={twMerge('flex justify-center', panelClass, itemClasses?.panel)}>

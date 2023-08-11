@@ -44,7 +44,7 @@ const {
           callToAction,
           classes: itemClasses = {},
         }) => (
-          <div class={twMerge('relative flex flex-col', panelClass, itemClasses?.panel)}>
+          <div class={twMerge('relative flex flex-col w-full', panelClass, itemClasses?.panel)}>
             {(icon || defaultIcon) && (
               <img src={icon || defaultIcon} class={twMerge('mb-2 w-20 h-20', defaultIconClass, itemClasses?.icon)} />
             )}
@@ -77,7 +77,7 @@ const {
             {time && (
               <p
                 class={twMerge(
-                  'text-3xl font-bold absolute top-4 right-10 mt-2 text-gray-500',
+                  'text-2xl md:text-3xl font-bold absolute bottom-4 md:top-4 md:right-10 mt-2 text-gray-500',
                   descriptionClass,
                   itemClasses?.time
                 )}
@@ -85,7 +85,7 @@ const {
               />
             )}
             {techSkill && (
-              <div class="flex items-center mt-4 gap-2">
+              <div class="flex flex-col md:flex-row md:items-center mt-4 gap-2  pb-8 md:pb-0">
                 <p class={twMerge('text-lg font-bold m-0 text-while', descriptionClass, itemClasses?.techSkill)}>
                   Tech Skills:
                 </p>

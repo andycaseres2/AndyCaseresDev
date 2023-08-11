@@ -30,13 +30,17 @@ const {
     classes={classes?.headline}
   />
 
-  <div class="w-full flex justify-center mb-10">
-    <span class="ml-4 rtl:ml-0 rtl:mr-0">
-      <a class:list={'btn ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm'} href={cv} target="__blank">
-        <Fragment set:html={'Download CV'} />
-      </a>
-    </span>
-  </div>
+  {
+    cv && (
+      <div class="w-full flex justify-center mb-10">
+        <span class="rtl:ml-0 rtl:mr-0">
+          <a class:list={'btn py-2.5 px-5.5 md:px-6 font-semibold shadow-none  text-2xl'} href={cv} target="__blank">
+            <Fragment set:html={'Download CV'} />
+          </a>
+        </span>
+      </div>
+    )
+  }
 
   <ItemGrid
     items={items}
@@ -44,7 +48,7 @@ const {
     classes={{
       container: '',
       title: 'md:text-[1.3rem]',
-      icon: 'w-24 h-24 md:w-20 md:h-20  rounded-lg dark:bg-slate-800 p-1',
+      icon: 'w-16 h-16 md:w-24 md:h-24 md:w-20 md:h-20  rounded-lg dark:bg-slate-800 p-1',
       ...((classes?.items as {}) ?? {}),
     }}
   />

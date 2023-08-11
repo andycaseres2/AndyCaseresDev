@@ -6,7 +6,6 @@ const {
   title = await Astro.slots.render('title'),
   subtitle = await Astro.slots.render('subtitle'),
   content = await Astro.slots.render('content'),
-  callToAction = await Astro.slots.render('callToAction'),
   callToAction2 = await Astro.slots.render('callToAction2'),
   image = await Astro.slots.render('image'),
 } = Astro.props;
@@ -74,7 +73,7 @@ const {
       <div>
         {
           image && (
-            <div class="relative m-auto max-w-5xl">
+            <div class="relative m-auto max-w-2xl">
               {typeof image === 'string' ? (
                 <Fragment set:html={image} />
               ) : (
