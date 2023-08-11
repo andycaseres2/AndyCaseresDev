@@ -1,0 +1,108 @@
+---
+import { twMerge } from 'tailwind-merge';
+import type { ItemGrid } from '~/types';
+import CTA from './CTA.astro';
+
+const { items = [], columns, defaultIcon = '', classes = {} } = Astro.props as ItemGrid;
+
+const {
+  container: containerClass = '',
+  // container: containerClass = "sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3",
+  panel: panelClass = '',
+  title: titleClass = '',
+  description: descriptionClass = '',
+  icon: defaultIconClass = 'text-primary',
+} = classes;
+---
+
+{
+  items && (
+    <div
+      class={twMerge(
+        `grid gap-8 gap-x-12 sm:gap-y-8 ${
+          columns === 4
+            ? 'lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2'
+            : columns === 3
+            ? 'lg:grid-cols-3 sm:grid-cols-2'
+            : columns === 2
+            ? 'sm:grid-cols-2 '
+            : ''
+        }`,
+        containerClass
+      )}
+    >
+      {items.map(
+        ({
+          title,
+          description,
+          description2,
+          description3,
+          description4,
+          techSkill,
+          time,
+          icon,
+          callToAction,
+          classes: itemClasses = {},
+        }) => (
+          <div class={twMerge('relative flex flex-col', panelClass, itemClasses?.panel)}>
+            {(icon || defaultIcon) && (
+              <img src={icon || defaultIcon} class={twMerge('mb-2 w-20 h-20', defaultIconClass, itemClasses?.icon)} />
+            )}
+            <div class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</div>
+            {description && (
+              <li
+                class={twMerge('text-muted mt-2', descriptionClass, itemClasses?.description)}
+                set:html={description}
+              />
+            )}
+            {description2 && (
+              <li
+                class={twMerge('text-muted mt-2', descriptionClass, itemClasses?.description2)}
+                set:html={description2}
+              />
+            )}
+            {description3 && (
+              <li
+                class={twMerge('text-muted mt-2', descriptionClass, itemClasses?.description3)}
+                set:html={description3}
+              />
+            )}
+            {description4 && (
+              <li
+                class={twMerge('text-muted mt-2', descriptionClass, itemClasses?.description4)}
+                set:html={description4}
+              />
+            )}
+
+            {time && (
+              <p
+                class={twMerge(
+                  'text-3xl font-bold absolute top-4 right-10 mt-2 text-gray-500',
+                  descriptionClass,
+                  itemClasses?.time
+                )}
+                set:html={time}
+              />
+            )}
+            {techSkill && (
+              <div class="flex items-center mt-4 gap-2">
+                <p class={twMerge('text-lg font-bold m-0 text-while', descriptionClass, itemClasses?.techSkill)}>
+                  Tech Skills:
+                </p>
+                <p
+                  class={twMerge('text-lg m-0 text-while', descriptionClass, itemClasses?.techSkill)}
+                  set:html={techSkill}
+                />
+              </div>
+            )}
+            {callToAction && (
+              <div class="mt-2 text-primary cursor-pointer">
+                <CTA callToAction={callToAction} />
+              </div>
+            )}
+          </div>
+        )
+      )}
+    </div>
+  )
+}

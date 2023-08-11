@@ -1,0 +1,336 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import Steps from '~/components/widgets/Steps.astro';
+
+const metadata = {
+  title: 'AndyCaseres',
+  ignoreTitleTemplate: true,
+};
+import { TechSkills } from '~/data';
+import Headline from '~/components/blog/Headline.astro';
+---
+
+<Layout metadata={metadata}>
+  <!-- Hero Widget ******************* -->
+
+  <Hero
+    id="hero"
+    callToAction={{ text: 'Get template', href: 'https://github.com/onwidget/AndyCaseres', icon: 'tabler:download' }}
+    callToAction2={{ text: 'About me', href: '#about' }}
+    image={{ src: import('~/assets/images/hero.webp'), alt: 'AndyCaseres Hero Image' }}
+  >
+    <Fragment slot="title">
+      Frontend <span>Developer</span>
+      <span class="text-primary dark:text-white highlight"> ReactJs</span> + Tailwind CSS + <span
+        class="text-primary dark:text-white highlight"
+        >Astro 2.0
+      </span> + NextJs
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">I am a Front-end Developer</span> with experience in technologies like JavaScript,
+        TypeScript, React.js, Next.js, GatsbyJS, GraphQL, TailwindCSS and more.</span
+      >
+    </Fragment>
+  </Hero>
+
+  <!-- Note Widget ******************* -->
+
+  <Note />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="about"
+    tagline="About me"
+    title="I'm a Frontend developer who loves creating web applications and learning new technologies."
+    subtitle="I'm a Frontend developer who loves creating web applications and learning new technologies."
+    subtitle2="I am very constant and passionate, which always helps me to go all the way in the things I do. Thanks to this I have learned to pay attention to the needs of efficient developing and useful way."
+    subtitle3="I like to learn new technologies that challenge me to continue exploring all the possibilities of web development."
+    cv="https://drive.google.com/file/d/147W5XfCkWzjattCjARZCxqudGPFZUaWb/view?usp=sharing"
+    items={TechSkills}
+  />
+
+  <!-- Steps Widget ****************** -->
+  <div id="projects"></div>
+  <Headline
+    tagline="Projects"
+    title="Projects"
+    subtitle="IIn this section you can see some of my projects and projects that I have worked on within companies."
+    classes="mt-10 text-center max-w-3xl mx-auto"
+  />
+  <Steps
+    title="Bellpi is an intelligent proposal where you can buy the car you have in mind and the one that really goes with you online."
+    items={[
+      {
+        title: 'JavaScript',
+        icon: '/src/assets/images/Javascript.webp',
+      },
+      {
+        title: 'GatsbyJS',
+        icon: '/src/assets/images/Gatsby.webp',
+      },
+      {
+        title: 'NextJs',
+        icon: '/src/assets/images/Next.webp',
+      },
+      {
+        title: 'GraphQL',
+        icon: '/src/assets/images/GraphQL.webp',
+      },
+      {
+        title: 'Strapi',
+        icon: '/src/assets/images/Strapi.webp',
+      },
+    ]}
+    image={{
+      src: import('~/assets/images/bellpi.webp'),
+      alt: 'Bellpi',
+    }}
+    link="https://bellpi.com"
+  />
+  <Steps
+    title="Datarte is a dissemination platform for artists, galleries, museums and curators. You can apply and create calls."
+    isReversed={true}
+    items={[
+      {
+        title: 'JavaScript',
+        icon: '/src/assets/images/Javascript.webp',
+      },
+      {
+        title: 'React',
+        icon: '/src/assets/images/React.webp',
+      },
+      {
+        title: 'Redux',
+        icon: '/src/assets/images/Redux.webp',
+      },
+      {
+        title: 'TailwindCSS',
+        icon: '/src/assets/images/Tailwind.webp',
+      },
+    ]}
+    image={{
+      src: import('~/assets/images/datarte.webp'),
+      alt: 'Bellpi',
+    }}
+    link="https://www.datarte.art/"
+  />
+  <Steps
+    title="Acflix is a clone of the famous Netflix platform."
+    items={[
+      {
+        title: 'JavaScript',
+        icon: '/src/assets/images/Javascript.webp',
+      },
+      {
+        title: 'ReactJs',
+        icon: '/src/assets/images/React.webp',
+      },
+      {
+        title: 'TailwindCSS',
+        icon: '/src/assets/images/Tailwind.webp',
+      },
+      {
+        title: 'Firebase',
+        icon: '/src/assets/images/firebase.webp',
+      },
+    ]}
+    image={{
+      src: import('~/assets/images/Acflix.webp'),
+      alt: 'Bellpi',
+    }}
+    link="https://twitchac.vercel.app/"
+  />
+  <Steps
+    isReversed={true}
+    title="AnimeAc is a website to find your favorite anime."
+    items={[
+      {
+        title: 'JavaScript',
+        icon: '/src/assets/images/Javascript.webp',
+      },
+      {
+        title: 'ReactJs',
+        icon: '/src/assets/images/React.webp',
+      },
+      {
+        title: 'TailwindCSS',
+        icon: '/src/assets/images/Tailwind.webp',
+      },
+    ]}
+    image={{
+      src: import('~/assets/images/AnimeAc.webp'),
+      alt: 'Bellpi',
+    }}
+    link="https://animeac.vercel.app/"
+  />
+  <Steps
+    title="VideoAc is a website to find your favorite videos."
+    items={[
+      {
+        title: 'JavaScript',
+        icon: '/src/assets/images/Javascript.webp',
+      },
+      {
+        title: 'ReactJs',
+        icon: '/src/assets/images/React.webp',
+      },
+      {
+        title: 'CSS',
+        icon: '/src/assets/images/css.webp',
+      },
+    ]}
+    image={{
+      src: import('~/assets/images/VideoAc.webp'),
+      alt: 'Bellpi',
+    }}
+    link="https://videoac.vercel.app/"
+  />
+  <Steps
+    title="EcommerceAc is a currency conversion app."
+    isReversed={true}
+    items={[
+      {
+        title: 'JavaScript',
+        icon: '/src/assets/images/Javascript.webp',
+      },
+      {
+        title: 'NextJs',
+        icon: '/src/assets/images/Next.webp',
+      },
+      {
+        title: 'TailwindCSS',
+        icon: '/src/assets/images/Tailwind.webp',
+      },
+    ]}
+    image={{
+      src: import('~/assets/images/conversionAc.webp'),
+      alt: 'Bellpi',
+    }}
+    link="https://conversion-ac.vercel.app/"
+  />
+
+  <!-- Features2 Widget ************** -->
+  <div id="experience"></div>
+  <Features2
+    title="Experience in web development using Javascript, ReactJs, NextJs, Gatsby, Astro, TailwindCSS and more."
+    tagline="Experience"
+    items={[
+      {
+        title: 'Frontend Developer Junior',
+        description:
+          'Contribuir a la creación de nuevos componentes, optimizando la arquitectura y mejorando la experiencia de usuario en las aplicaciones.',
+        description2:
+          'Implementar nuevas características y funcionalidades, colaborando estrechamente con el equipo de diseño y otros desarrolladores para garantizar un producto final de alta calidad.',
+        description3:
+          'Realizar refactorizaciones de código para mejorar la eficiencia, la escalabilidad y el mantenimiento de las aplicaciones.',
+        description4:
+          'Detectar y corregir bugs y problemas técnicos de manera proactiva, trabajando en colaboración con el equipo para asegurar un producto libre de errores.',
+        icon: '/src/assets/images/bellpi.svg',
+        techSkill: 'Bitbucket · GatsbyJS · GraphQL · Next.js · React.js · JavaScript · Jira · Git',
+        time: 'December 2022 - Currently',
+      },
+      {
+        title: 'Frontend Developer Junior',
+        description:
+          'Colaborar en la creación de interfaces de usuario atractivas y funcionales, asegurándome de que cumplan con los estándares de diseño y usabilidad.',
+        description2:
+          'Desarrollar y crear nuevos componentes para mejorar la arquitectura y la experiencia de usuario de las aplicaciones.',
+        description3:
+          'Identificar y solucionar de manera proactiva los errores y problemas técnicos (bugs), trabajando en estrecha colaboración con el equipo para garantizar una entrega de calidad.',
+        icon: '/src/assets/images/datarte.svg',
+        techSkill: 'ReactJs · ReduxJs · TalwindCss · JavaScript · Storybook · Git',
+        time: 'May 2022 - October 2022',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </Features2>
+
+  <!-- HighlightedPosts Widget ******* -->
+  <!--
+  <BlogLatestPosts
+    title="Find out more content in our Blog"
+    information={`The blog is used to display AndyCaseres documentation.
+                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
+                        Astro is a very interesting technology. Thanks.`}
+  /> -->
+
+  <!-- FAQs Widget ******************* -->
+
+  <!-- <FAQs
+    title="Frequently Asked Questions"
+    subtitle="Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque. Morbi tincidunt lacus nec tortor scelerisque pulvinar."
+    tagline="FAQs"
+    items={[
+      {
+        title: 'What do I need to start?',
+        description:
+          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+      },
+      {
+        title: 'How to install the Astro + Tailwind CSS template?',
+        description:
+          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+      },
+      {
+        title: "What's something that you don't understand?",
+        description:
+          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+      },
+      {
+        title: "What's an example of when you changed your mind?",
+        description:
+          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+      },
+      {
+        title: 'What is something that you would like to try again?',
+        description:
+          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+      },
+      {
+        title: 'If you could only ask one question to each person you meet, what would that question be?',
+        description:
+          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+      },
+    ]}
+  /> -->
+
+  <!-- Stats Widget ****************** -->
+
+  <!-- <Stats
+    stats={[
+      { title: 'Downloads', amount: '132K' },
+      { title: 'Stars', amount: '24.8K' },
+      { title: 'Forks', amount: '10.3K' },
+      { title: 'Users', amount: '48.4K' },
+    ]}
+  /> -->
+
+  <!-- CallToAction Widget *********** -->
+
+  <!-- <CallToAction
+    callToAction={{
+      text: 'Get template',
+      href: 'https://github.com/onwidget/AndyCaseres',
+      icon: 'tabler:download',
+    }}
+  > -->
+  <!-- <Fragment slot="title">
+    Astro + <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+  </Fragment> -->
+
+  <!-- <Fragment slot="subtitle">
+    Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't waste
+    more time! :P
+  </Fragment> -->
+</Layout>

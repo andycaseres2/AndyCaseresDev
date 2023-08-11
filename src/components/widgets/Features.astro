@@ -1,0 +1,51 @@
+---
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import ItemGrid from '~/components/ui/ItemGrid.astro';
+import Headline from '~/components/ui/Headline.astro';
+import type { Features } from '~/types';
+
+const {
+  title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  subtitle2 = await Astro.slots.render('subtitle2'),
+  subtitle3 = await Astro.slots.render('subtitle3'),
+  tagline = await Astro.slots.render('tagline'),
+  items = [],
+  columns = 2,
+  id,
+  cv,
+  isDark = false,
+  classes = {},
+  bg = await Astro.slots.render('bg'),
+} = Astro.props as Features;
+---
+
+<WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-5xl ${classes?.container ?? ''}`} bg={bg}>
+  <Headline
+    title={title}
+    subtitle={subtitle}
+    subtitle2={subtitle2}
+    subtitle3={subtitle3}
+    tagline={tagline}
+    classes={classes?.headline}
+  />
+
+  <div class="w-full flex justify-center mb-10">
+    <span class="ml-4 rtl:ml-0 rtl:mr-0">
+      <a class:list={'btn ml-2 py-2.5 px-5.5 md:px-6 font-semibold shadow-none text-sm'} href={cv} target="__blank">
+        <Fragment set:html={'Download CV'} />
+      </a>
+    </span>
+  </div>
+
+  <ItemGrid
+    items={items}
+    columns={columns}
+    classes={{
+      container: '',
+      title: 'md:text-[1.3rem]',
+      icon: 'w-24 h-24 md:w-20 md:h-20  rounded-lg dark:bg-slate-800 p-1',
+      ...((classes?.items as {}) ?? {}),
+    }}
+  />
+</WidgetWrapper>
