@@ -1,6 +1,6 @@
 export const TechSkills = [
   {
-    icon: import('~/assets/images/Html.webp'),
+    icon: '/src/assets/images/Html.webp',
   },
   {
     icon: '/src/assets/images/Css.webp',
