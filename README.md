@@ -52,7 +52,7 @@
 
 ## Demo
 
-📌 [https://AndyCaseres.vercel.app/](https://AndyCaseres.vercel.app/)
+📌 [https://AndyCaseresDev.vercel.app/](https://AndyCaseresDev.vercel.app/)
 
 <br>
 
@@ -98,14 +98,8 @@ Inside AndyCaseres template, you'll see the following folders and files:
 │   │   ├── MarkdownLayout.astro
 │   │   └── PageLayout.astro
 │   ├── pages/
-│   │   ├── [...blog]/
-│   │   │   ├── [category]/
-│   │   │   ├── [tag]/
-│   │   │   ├── [...page].astro
-│   │   │   └── index.astro
 │   │   ├── index.astro
 │   │   ├── 404.astro
-│   │   ├-- rss.xml.ts
 │   │   └── ...
 │   ├── utils/
 │   ├── config.yaml
