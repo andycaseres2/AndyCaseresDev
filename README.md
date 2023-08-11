@@ -52,7 +52,7 @@
 
 ## Demo
 
-📌 [https://AndyCaseresDev.vercel.app/](https://AndyCaseresDev.vercel.app/)
+📌 [https://andycaseresdev.vercel.app/](https://andycaseresdev.vercel.app/)
 
 <br>
 
