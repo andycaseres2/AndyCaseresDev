@@ -19,6 +19,7 @@ export const headerData = {
 export const footerData = {
   socialLinks: [
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/in/andy-caseres/' },
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/andycode_/' },
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/andycaseres2' },
     { ariaLabel: 'Twitter', icon: 'tabler:brand-twitter', href: 'https://twitter.com/AndyCaseresDev' },
   ],
