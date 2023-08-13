@@ -27,9 +27,9 @@ const {
           <div class="flex flex-col justify-center items-center mr-2">
             <div>
               <div class="flex items-center justify-center">
-                {icon && (
+                {(icon || defaultIcon) && (
                   <img
-                    src={icon}
+                    src={icon || defaultIcon}
                     class={twMerge('w-12 h-12 p-2 rounded-lg dark:bg-slate-800', defaultIconClass, itemClasses?.icon)}
                   />
                 )}
