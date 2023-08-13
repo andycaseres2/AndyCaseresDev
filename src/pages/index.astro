@@ -8,13 +8,12 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 
 //images
-import JS from '~/assets/images/Javascript.webp';
 
 const metadata = {
   title: 'AndyCaseres',
   ignoreTitleTemplate: true,
 };
-import { TechSkills } from '~/data';
+import { TechSkills, Bellpi, Datarte, Acflix, VideoAc, ConversionAc, AnimeAc, Experience } from '~/data';
 import Headline from '~/components/blog/Headline.astro';
 ---
 
@@ -25,7 +24,10 @@ import Headline from '~/components/blog/Headline.astro';
     id="hero"
     callToAction={{ text: 'Get template', href: 'https://github.com/onwidget/AndyCaseres', icon: 'tabler:download' }}
     callToAction2={{ text: 'About me', href: '#about' }}
-    image={{ src: import('~/assets/images/hero.webp'), alt: 'AndyCaseres Hero Image' }}
+    image={{
+      src: 'https://ik.imagekit.io/andycaseres/portfolio/hero.webp?updatedAt=1691953652081',
+      alt: 'AndyCaseres Hero Image',
+    }}
   >
     <Fragment slot="title">
       Frontend <span>Developer</span>
@@ -70,30 +72,9 @@ import Headline from '~/components/blog/Headline.astro';
   />
   <Steps
     title="Bellpi is an intelligent proposal where you can buy the car you have in mind and the one that really goes with you online."
-    items={[
-      {
-        title: 'JavaScript',
-        icon: 'https://ik.imagekit.io/andycaseres/portfolio/Javascript.webp?updatedAt=1691953652824',
-      },
-      {
-        title: 'GatsbyJS',
-        icon: '/src/assets/images/Gatsby.webp',
-      },
-      {
-        title: 'NextJs',
-        icon: '/src/assets/images/Next.webp',
-      },
-      {
-        title: 'GraphQL',
-        icon: '/src/assets/images/GraphQL.webp',
-      },
-      {
-        title: 'Strapi',
-        icon: '/src/assets/images/Strapi.webp',
-      },
-    ]}
+    items={Bellpi}
     image={{
-      src: import('~/assets/images/bellpi.webp'),
+      src: 'https://ik.imagekit.io/andycaseres/portfolio/bellpi.webp?updatedAt=1691953647709',
       alt: 'Bellpi',
     }}
     link="https://bellpi.com"
@@ -101,121 +82,48 @@ import Headline from '~/components/blog/Headline.astro';
   <Steps
     title="Datarte is a dissemination platform for artists, galleries, museums and curators. You can apply and create calls."
     isReversed={true}
-    items={[
-      {
-        title: 'JavaScript',
-        icon: '/src/assets/images/Javascript.webp',
-      },
-      {
-        title: 'React',
-        icon: '/src/assets/images/React.webp',
-      },
-      {
-        title: 'Redux',
-        icon: '/src/assets/images/Redux.webp',
-      },
-      {
-        title: 'TailwindCSS',
-        icon: '/src/assets/images/Tailwind.webp',
-      },
-    ]}
+    items={Datarte}
     image={{
-      src: import('~/assets/images/datarte.webp'),
-      alt: 'Bellpi',
+      src: 'https://ik.imagekit.io/andycaseres/portfolio/datarte.webp?updatedAt=1691953648924',
+      alt: 'Datarte',
     }}
     link="https://www.datarte.art/"
   />
   <Steps
     title="Acflix is a clone of the famous Netflix platform."
-    items={[
-      {
-        title: 'JavaScript',
-        icon: '/src/assets/images/Javascript.webp',
-      },
-      {
-        title: 'ReactJs',
-        icon: '/src/assets/images/React.webp',
-      },
-      {
-        title: 'TailwindCSS',
-        icon: '/src/assets/images/Tailwind.webp',
-      },
-      {
-        title: 'Firebase',
-        icon: '/src/assets/images/firebase.webp',
-      },
-    ]}
+    items={Acflix}
     image={{
-      src: import('~/assets/images/Acflix.webp'),
-      alt: 'Bellpi',
+      src: 'https://ik.imagekit.io/andycaseres/portfolio/Acflix.webp?updatedAt=1691953648452',
+      alt: 'Acflix',
     }}
-    link="https://twitchac.vercel.app/"
+    link="https://acflix.vercel.app/"
   />
   <Steps
     isReversed={true}
     title="AnimeAc is a website to find your favorite anime."
-    items={[
-      {
-        title: 'JavaScript',
-        icon: '/src/assets/images/Javascript.webp',
-      },
-      {
-        title: 'ReactJs',
-        icon: '/src/assets/images/React.webp',
-      },
-      {
-        title: 'TailwindCSS',
-        icon: '/src/assets/images/Tailwind.webp',
-      },
-    ]}
+    items={AnimeAc}
     image={{
-      src: import('~/assets/images/AnimeAc.webp'),
-      alt: 'Bellpi',
+      src: 'https://ik.imagekit.io/andycaseres/portfolio/AnimeAc.webp?updatedAt=1691953648725',
+      alt: 'AnimeAc',
     }}
     link="https://animeac.vercel.app/"
   />
   <Steps
     title="VideoAc is a website to find your favorite videos."
-    items={[
-      {
-        title: 'JavaScript',
-        icon: '/src/assets/images/Javascript.webp',
-      },
-      {
-        title: 'ReactJs',
-        icon: '/src/assets/images/React.webp',
-      },
-      {
-        title: 'CSS',
-        icon: '/src/assets/images/css.webp',
-      },
-    ]}
+    items={VideoAc}
     image={{
-      src: import('~/assets/images/VideoAc.webp'),
-      alt: 'Bellpi',
+      src: 'https://ik.imagekit.io/andycaseres/portfolio/VideoAc.webp?updatedAt=1691953657813',
+      alt: 'VideoAc',
     }}
     link="https://videoac.vercel.app/"
   />
   <Steps
-    title="EcommerceAc is a currency conversion app."
+    title="ConversionAc is a currency conversion app."
     isReversed={true}
-    items={[
-      {
-        title: 'JavaScript',
-        icon: '/src/assets/images/Javascript.webp',
-      },
-      {
-        title: 'NextJs',
-        icon: '/src/assets/images/Next.webp',
-      },
-      {
-        title: 'TailwindCSS',
-        icon: '/src/assets/images/Tailwind.webp',
-      },
-    ]}
+    items={ConversionAc}
     image={{
-      src: import('~/assets/images/conversionAc.webp'),
-      alt: 'Bellpi',
+      src: 'https://ik.imagekit.io/andycaseres/portfolio/conversionAc.webp?updatedAt=1691953647851',
+      alt: 'ConversionAc',
     }}
     link="https://conversion-ac.vercel.app/"
   />
@@ -225,33 +133,7 @@ import Headline from '~/components/blog/Headline.astro';
   <Features2
     title="Experience in web development using Javascript, ReactJs, NextJs, Gatsby, Astro, TailwindCSS and more."
     tagline="Experience"
-    items={[
-      {
-        title: 'Frontend Developer Junior',
-        description:
-          'Contribute to the creation of new components, optimize the architecture and improve the user experience in applications.',
-        description2:
-          'Implement new features and functionality, collaborating closely with the design team and other developers to ensure a high-quality final product.',
-        description3: 'Perform code refactorings to improve application efficiency, scalability, and maintainability.',
-        description4:
-          'Detect and fix bugs and technical issues proactively, working collaboratively with the team to ensure a bug-free product.',
-        icon: '/src/assets/images/bellpi.svg',
-        techSkill: 'Bitbucket · GatsbyJS · GraphQL · Next.js · React.js · JavaScript · Jira · Git',
-        time: 'December 2022 - Currently',
-      },
-      {
-        title: 'Frontend Developer Junior',
-        description:
-          'Collaborate in the creation of attractive and functional user interfaces, making sure that they comply with design and usability standards.',
-        description2:
-          'Develop and create new components to improve the architecture and user experience of applications.',
-        description3:
-          'Proactively identify and fix errors and technical issues (bugs), working closely with the team to ensure quality delivery.',
-        icon: '/src/assets/images/datarte.svg',
-        techSkill: 'ReactJs · ReduxJs · TalwindCss · JavaScript · Storybook · Git',
-        time: 'May 2022 - October 2022',
-      },
-    ]}
+    items={Experience}
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
