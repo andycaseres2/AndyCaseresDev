@@ -1,22 +1,12 @@
 ---
 import { Image } from '@astrojs/image/components';
+
+const { logo, logo2 } = Astro.props;
 ---
 
 <span
   class="w-8/12 flex items-center self-center ml-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
 >
-  <Image
-    class="hidden dark:block"
-    src="https://ik.imagekit.io/andycaseres/portfolio/Logo.svg?updatedAt=1691953652498"
-    alt="logo"
-    width={130}
-    height={80}
-  />
-  <Image
-    class="block dark:hidden"
-    src="https://ik.imagekit.io/andycaseres/portfolio/Logo2.svg?updatedAt=1691953652498"
-    alt="logo2"
-    width={130}
-    height={80}
-  />
+  <Image class="hidden dark:block" src={logo} alt="logo" width={130} height={80} />
+  <Image class="block dark:hidden" src={logo2} alt="logo2" width={130} height={80} />
 </span>
