@@ -48,7 +48,7 @@ export const TechSkills = [
     icon: 'https://ik.imagekit.io/andycaseres/portfolio/Github.webp?updatedAt=1691953650177',
   },
   {
-    icon: 'https://ik.imagekit.io/andycaseres/portfolio/Sass.webp?updatedAt=1691953654426',
+    icon: 'https://ik.imagekit.io/andycaseres/portfolio/pngegg.webp?updatedAt=1691965455065',
   },
   {
     icon: 'https://ik.imagekit.io/andycaseres/portfolio/Tailwind.webp?updatedAt=1691953657236',

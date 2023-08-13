@@ -2,6 +2,7 @@
 import { twMerge } from 'tailwind-merge';
 import type { ItemGrid } from '~/types';
 import CTA from './CTA.astro';
+import { Image } from '@astrojs/image/components';
 
 const { items = [], defaultIcon = '', classes = {} } = Astro.props as ItemGrid;
 
@@ -23,9 +24,9 @@ const {
           <div class={twMerge('flex justify-center', panelClass, itemClasses?.panel)}>
             <div class="flex justify-center">
               {(icon || defaultIcon) && (
-                <img
-                  width="64"
-                  height="64"
+                <Image
+                  width={64}
+                  height={64}
                   src={icon || defaultIcon}
                   class={twMerge('w-full h-full mr-2 rtl:mr-0 rtl:ml-2', defaultIconClass, itemClasses?.icon)}
                 />
