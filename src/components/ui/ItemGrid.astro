@@ -24,6 +24,8 @@ const {
             <div class="flex justify-center">
               {(icon || defaultIcon) && (
                 <img
+                  width="64"
+                  height="64"
                   src={icon || defaultIcon}
                   class={twMerge('w-full h-full mr-2 rtl:mr-0 rtl:ml-2', defaultIconClass, itemClasses?.icon)}
                 />
