@@ -46,7 +46,11 @@ const {
         }) => (
           <div class={twMerge('relative flex flex-col w-full', panelClass, itemClasses?.panel)}>
             {(icon || defaultIcon) && (
-              <img src={icon || defaultIcon} class={twMerge('mb-2 w-20 h-20', defaultIconClass, itemClasses?.icon)} />
+              <img
+                src={icon || defaultIcon}
+                class={twMerge('mb-2 w-20 h-20', defaultIconClass, itemClasses?.icon)}
+                loading="lazy"
+              />
             )}
             <div class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</div>
             {description && (
