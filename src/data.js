@@ -1,66 +1,87 @@
 export const TechSkills = [
   {
-    icon: 'https://ik.imagekit.io/andycaseres/portfolio/Javascript.webp?updatedAt=1691953652824',
+    icon: 'https://ik.imagekit.io/andycaseres/portfolio/Html.webp?updatedAt=1691953652824',
+    title: 'HTML',
   },
   {
     icon: 'https://ik.imagekit.io/andycaseres/portfolio/Css.webp?updatedAt=1691953648743',
+    title: 'CSS',
   },
   {
     icon: 'https://ik.imagekit.io/andycaseres/portfolio/Javascript.webp?updatedAt=1691953652824',
+    title: 'JavaScript',
   },
   {
     icon: 'https://ik.imagekit.io/andycaseres/portfolio/Typescript.webp?updatedAt=1691953657810',
+    title: 'TypeScript',
   },
   {
     icon: 'https://ik.imagekit.io/andycaseres/portfolio/React.webp?updatedAt=1691953654127',
+    title: 'React.js',
   },
   {
     icon: 'https://ik.imagekit.io/andycaseres/portfolio/Next.webp?updatedAt=1691953653290',
+    title: 'Next.js',
   },
   {
     icon: 'https://ik.imagekit.io/andycaseres/portfolio/astro.webp?updatedAt=1691953647273',
+    title: 'Astro',
   },
   {
     icon: 'https://ik.imagekit.io/andycaseres/portfolio/Gatsby.webp?updatedAt=1691953649818',
+    title: 'Gatsby',
   },
   {
     icon: 'https://ik.imagekit.io/andycaseres/portfolio/GraphQL.webp?updatedAt=1691953650063',
+    title: 'GraphQL',
   },
   {
     icon: 'https://ik.imagekit.io/andycaseres/portfolio/Redux.webp?updatedAt=1691953654517',
+    title: 'Redux',
   },
   {
     icon: 'https://ik.imagekit.io/andycaseres/portfolio/Bootstrap.webp?updatedAt=1691953648094',
+    title: 'Bootstrap',
   },
   {
     icon: 'https://ik.imagekit.io/andycaseres/portfolio/Vite.webp?updatedAt=1691953657957',
+    title: 'Vite',
   },
   {
     icon: 'https://ik.imagekit.io/andycaseres/portfolio/BitBucket.webp?updatedAt=1691953646785',
+    title: 'BitBucket',
   },
   {
     icon: 'https://ik.imagekit.io/andycaseres/portfolio/Jira.webp?updatedAt=1691953652244',
+    title: 'Jira',
   },
   {
     icon: 'https://ik.imagekit.io/andycaseres/portfolio/Git.webp?updatedAt=1691953649965',
+    title: 'Git',
   },
   {
     icon: 'https://ik.imagekit.io/andycaseres/portfolio/Github.webp?updatedAt=1691953650177',
+    title: 'Github',
   },
   {
     icon: 'https://ik.imagekit.io/andycaseres/portfolio/pngegg.webp?updatedAt=1691965455065',
+    title: 'Sass',
   },
   {
     icon: 'https://ik.imagekit.io/andycaseres/portfolio/Tailwind.webp?updatedAt=1691953657236',
+    title: 'TailwindCSS',
   },
   {
     icon: 'https://ik.imagekit.io/andycaseres/portfolio/MaterialUI.webp?updatedAt=1691953652865',
+    title: 'MaterialUI',
   },
   {
     icon: 'https://ik.imagekit.io/andycaseres/portfolio/Storybook.webp?updatedAt=1691953654587',
+    title: 'Storybook',
   },
   {
     icon: 'https://ik.imagekit.io/andycaseres/portfolio/Strapi.webp?updatedAt=1691953656830',
+    title: 'Strapi',
   },
 ];
 

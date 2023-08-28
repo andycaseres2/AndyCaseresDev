@@ -21,7 +21,7 @@ const {
     <div class={twMerge(`grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 mx-auto md:gap-6 gap-y-8 `, containerClass)}>
       {items.map(({ title, description, icon, callToAction, classes: itemClasses = {} }) => (
         <div>
-          <div class={twMerge('flex justify-center', panelClass, itemClasses?.panel)}>
+          <div class={twMerge('flex justify-center flex-col items-center gap-2', panelClass, itemClasses?.panel)}>
             <div class="flex justify-center">
               {(icon || defaultIcon) && (
                 <Image
