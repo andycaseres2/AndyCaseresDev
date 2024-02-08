@@ -41,17 +41,20 @@ const {
           techSkill,
           time,
           icon,
+          link,
           callToAction,
           classes: itemClasses = {},
         }) => (
           <div class={twMerge('relative flex flex-col w-full', panelClass, itemClasses?.panel)}>
             {(icon || defaultIcon) && (
-              <img
-                src={icon || defaultIcon}
-                class={twMerge('mb-2 w-20 h-20', defaultIconClass, itemClasses?.icon)}
-                loading="lazy"
-                alt={`icon-${title}`}
-              />
+              <a class="flex justify-start" href={link} target="__blank">
+                <img
+                  src={icon || defaultIcon}
+                  class={twMerge('mb-2 w-20 h-20', defaultIconClass, itemClasses?.icon)}
+                  loading="lazy"
+                  alt={`icon-${title}`}
+                />
+              </a>
             )}
             <div class={twMerge('text-xl font-bold', titleClass, itemClasses?.title)}>{title}</div>
             {description && (

@@ -193,7 +193,19 @@ export const ConversionAc = [
 
 export const Experience = [
   {
-    title: 'Frontend Developer Junior',
+    title: 'Frontend Developer',
+    description:
+      'Development and creation of projects from scratch with different frameworks such as ReactJs and Angular.',
+    description2: 'Development of new functionalities and components.',
+    description3: 'Frontend optimization applying UI concepts focused on user experience.',
+    description4: 'Correction of Errors and Bugs applying good practices.',
+    icon: 'https://www.logotexo.com/images/logo.svg',
+    techSkill: 'React.js · Angular · JavaScript ·  Subversion',
+    time: 'Enero 2024 - Currently - (Part-Time)',
+    link: 'https://www.logotexo.com/es/index.html',
+  },
+  {
+    title: 'Frontend Developer',
     description:
       'Contribute to the creation of new components, optimize the architecture and improve the user experience in applications.',
     description2:
@@ -201,9 +213,10 @@ export const Experience = [
     description3: 'Perform code refactorings to improve application efficiency, scalability, and maintainability.',
     description4:
       'Detect and fix bugs and technical issues proactively, working collaboratively with the team to ensure a bug-free product.',
-    icon: 'https://ik.imagekit.io/andycaseres/portfolio/bellpi.svg?updatedAt=1691953648368',
+    icon: 'https://tiendacasatoro.com/wp-content/uploads/2020/07/logo-ct@3x_blanco.png',
     techSkill: 'Bitbucket · GatsbyJS · GraphQL · Next.js · React.js · JavaScript · Jira · Git',
     time: 'December 2022 - Currently',
+    link: 'https://www.casatoro.com/',
   },
   {
     title: 'Frontend Developer Junior',
@@ -215,5 +228,6 @@ export const Experience = [
     icon: 'https://ik.imagekit.io/andycaseres/portfolio/datarte.svg?updatedAt=1691953648386',
     techSkill: 'ReactJs · ReduxJs · TalwindCss · JavaScript · Storybook · Git',
     time: 'May 2022 - October 2022',
+    link: 'https://www.datarte.art/',
   },
 ];
